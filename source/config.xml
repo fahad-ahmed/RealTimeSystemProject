@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration>
+	<IsEdfEnabled>0</IsEdfEnabled>  <!-- disable = 0, enable = 1  -->
+	<IsPreemptionEnabled>1</IsPreemptionEnabled>
+    <ShoutCastServer>
+        <ServerAddress>127.0.0.1</ServerAddress>
+        <ServerPort>8000</ServerPort>
+        <MountPoint>/music</MountPoint>
+        <MountPassword>hackme</MountPassword>
+    </ShoutCastServer>
+    <Microphone>
+        <RmsThreshold>1000</RmsThreshold>
+    </Microphone>
+    <SporadicTask>
+        <Priority>2</Priority>  <!-- low = 0, mid = 1, high =2  -->
+        <ExecutionTime>3000</ExecutionTime>  <!-- in milliseconds  -->
+        <Deadline>3500</Deadline>  <!-- in milliseconds from Scheduled Time  -->
+    </SporadicTask>
+    <AperiodicTask>
+        <Priority>1</Priority>  <!-- low = 0, mid = 1, high =2  -->
+        <ExecutionTime>800</ExecutionTime>
+        <Deadline>1200</Deadline>
+    </AperiodicTask>
+    <PeriodicTask>
+        <Priority>0</Priority>  <!-- low = 0, mid = 1, high =2  -->
+        <Period>4000</Period>   <!-- in milliseconds  -->
+        <ExecutionTime>3000</ExecutionTime>
+        <Deadline>4500</Deadline> 
+    </PeriodicTask>
+	<MountPoint>/music</MountPoint>
+	<LocalMusicFileName>sample.mp3</LocalMusicFileName>
+</Configuration>
